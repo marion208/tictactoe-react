@@ -1,38 +1,79 @@
-.App {
-  text-align: center;
+@font-face {
+  font-family: "Gluten-Regular";
+  src: url("fonts/Gluten-Regular.ttf");
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+height: 100vh;
+width: 100vw;
+display: flex;
+justify-content: center;
+align-items: center;
+margin: 0;
+font-family: "Gluten-Regular";
+text-align: center;
+background-image: url("images/jr-korpa-cJljbGYLTAI-unsplash.jpg");
+background-size: cover;
+color: white;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+h1 {
+font-size: 3em;
+text-transform: uppercase;
+text-shadow: black 2px 2px;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+h1:hover {
+cursor: default;
 }
-
-.App-link {
-  color: #61dafb;
+.ButtonStartNewGame {
+font-weight: bold;
+font-size: 2em;
+text-shadow: black 2px 2px;
+margin-bottom: 0.5em;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.ButtonStartNewGame:hover {
+cursor: pointer;
+filter: invert(0.9);
+}
+.GridGame {
+display: grid;
+grid-template-columns: repeat(3, 1fr);
+grid-auto-rows: minmax(100px, auto);
+grid-gap: 0px;
+height: 50vh;
+width: 50vh;
+}
+.GridContainer {
+display: flex;
+justify-content: center;
+}
+#loader {
+position: absolute;
+top : 52%;
+left: 45.5%;
+zoom: 2.5;
+}
+.invisible {
+display: none;
+}
+#fireworks_container {
+position: absolute;
+top : 30%;
+left: 30%;
+}
+#game_message_container {
+position: absolute;
+top : 0;
+left: 0;
+display: flex;
+justify-content: center;
+align-items: center;
+width: 100vw;
+height: 100vh;
+font-size: 6em;
+color: #cb2121;
+text-transform: uppercase;
+text-shadow: black 2px 2px;
+z-index: -1;
+}
+#game_message_container:hover {
+cursor: default;
 }
